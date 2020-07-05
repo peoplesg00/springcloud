@@ -1,0 +1,14 @@
+server:
+  port: 9000
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+      #集群版
+      #defaultZone: http://localhost:7001/eureka
+      #设置与Eureka Server交互的地址查询服务和注册中心都需要依赖这个地址
+feign:
+  hystrix:
+    enabled: true
